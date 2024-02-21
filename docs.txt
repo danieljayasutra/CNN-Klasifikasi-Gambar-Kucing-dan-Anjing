@@ -1,0 +1,28 @@
+Dalam kode yang Saya bagikan, terdapat proses pelatihan model untuk mengklasifikasikan gambar-gambar kucing dan anjing menggunakan jaringan saraf konvolusi (CNN). Proses ini melibatkan langkah-langkah seperti pembacaan gambar, augmentasi data, pengaturan arsitektur model CNN, pelatihan, dan evaluasi.
+
+Berikut adalah hasil-hasil utama dari pelatihan model yang telah Saya lakukan:
+
+1. Arsitektur Model CNN:
+- Model terdiri dari beberapa lapisan konvolusi (Conv2D) yang diikuti oleh lapisan pengecilan (MaxPooling2D).
+- Kemudian, terdapat lapisan Flatten untuk mengubah matriks 2D menjadi vektor 1D.
+- Ada juga lapisan-lapisan Dense (fully connected) yang diikuti oleh aktivasi ReLU dan dropout untuk menghindari overfitting.
+- Model menggunakan fungsi aktivasi sigmoid pada lapisan output karena ini adalah masalah klasifikasi biner.
+
+2. Pelatihan Model:
+- Model dilatih menggunakan generator gambar yang telah dibuat sebelumnya (train_image_gen dan test_image_gen).
+- Proses pelatihan dilakukan selama 30 epoch dengan batch size 16.
+- Metrik yang dipantau adalah loss (fungsi binary crossentropy) dan akurasi.
+- Terdapat fluktuasi dalam akurasi dan loss baik pada data pelatihan maupun validasi sepanjang proses pelatihan.
+
+3. Evaluasi Model:
+- Setelah pelatihan selesai, Saya melakukan evaluasi model menggunakan gambar anjing tertentu dari direktori pengujian.
+- Model mengklasifikasikan gambar tersebut sebagai kelas '1', yang berarti anjing, dengan probabilitas sekitar 0.69.
+
+4. Visualisasi Hasil Pelatihan:
+- Saya juga melakukan visualisasi grafik akurasi pelatihan dan validasi selama proses pelatihan.
+
+Dari hasil ini, terlihat bahwa model memiliki tingkat akurasi sekitar 69% pada data pengujian. Namun, terdapat fluktuasi dalam kinerja model selama proses pelatihan yang bisa menjadi bahan evaluasi lebih lanjut. Juga, mungkin ada penyesuaian yang dapat dilakukan pada arsitektur model, hyperparameter, atau proses augmentasi data untuk meningkatkan performa model.
+
+
+
+
