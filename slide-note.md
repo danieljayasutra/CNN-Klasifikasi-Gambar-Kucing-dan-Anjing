@@ -138,28 +138,10 @@ print(predictions)
 ```
 
 2. Interpretasi hasil prediksi model:
-Hasil prediksi model adalah nilai-nilai yang diprediksi oleh model untuk setiap sampel data pengujian.
-Untuk klasifikasi biner, nilai-nilai ini sering berupa probabilitas bahwa sampel tersebut termasuk dalam kelas positif.
-Contoh Kode:
-```
-# Interpretasi hasil prediksi model untuk klasifikasi biner
-for i in range(len(predictions)):
-    if predictions[i] >= 0.5:
-        print("Gambar", i, "adalah kucing")
-    else:
-        print("Gambar", i, "adalah anjing")
-```
-
-3. Evaluasi performa model berdasarkan akurasi dan loss:
-Akurasi dan loss adalah metrik yang umum digunakan untuk mengevaluasi performa model.
-Akurasi mengukur seberapa baik model dalam memprediksi kelas-kelas target secara benar, sedangkan loss mengukur seberapa baik model dalam meminimalkan kesalahan prediksi.
-Dalam contoh kode, test_images dan test_labels adalah data pengujian yang digunakan untuk evaluasi model.
-Contoh Kode:
-```
-# Evaluasi model berdasarkan akurasi dan loss
-loss, accuracy = model.evaluate(test_images, test_labels)
-
-# Menampilkan hasil evaluasi
-print("Loss:", loss)
-print("Accuracy:", accuracy)
+* model.predict(dog_img): Kode ini memanggil metode predict dari model yang telah dilatih sebelumnya dengan gambar dog_img sebagai argumennya. Metode ini digunakan untuk memprediksi kelas dari gambar yang diberikan.
+* array([[0.6940112]], dtype=float32): Ini adalah output dari metode predict. 
+Output ini berupa array numpy yang berisi nilai probabilitas yang diberikan oleh model untuk kelas positif (dalam kasus ini, kelas "DOG"). Nilai probabilitas ini menunjukkan seberapa yakin model dalam memprediksi bahwa gambar tersebut termasuk dalam kelas yang diinginkan ("DOG" dalam hal ini).
+```# Untuk memeriksa akurasi
+model.predict(dog_img)
+array([[0.6940112]], dtype=float32)
 ```
