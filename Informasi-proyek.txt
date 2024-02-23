@@ -1,4 +1,5 @@
-Deep Learning : Deteksi Objek dan Klasifikasi Gambar dengan Convolution Neural Network
+Pengembangan Model Klasifikasi Gambar Kucing dan Anjing Menggunakan Convolutional Neural Network (CNN) dengan Augmentasi Gambar.
+
 Projek ini menjelajahi kemampuan jaringan saraf konvolusi (Convolutional Neural Network CNN) untuk mengenali dan membedakan antara gambar-gambar kucing dan anjing. Dataset yang digunakan merupakan koleksi gambar berwarna kustom sendiri yang memiliki 2 jenis yaitu gambar anjing dan kucing, tersimpan dalam folder bernama "CATS_DOGS".
 
 Dataset ini terbagi menjadi dua subset utama: set data latih (train) dan set data uji (test). Masing-masing dari kedua subset ini berisi dua kelas utama: "CAT" dan "DOG". Tujuan utama dari proyek ini adalah melatih model CNN untuk secara akurat mengidentifikasi apakah sebuah gambar menggambarkan kucing atau anjing.
